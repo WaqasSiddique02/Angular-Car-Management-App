@@ -1,0 +1,41 @@
+<!--Displaying Data-->
+<div>
+    <h2>Get Data</h2>
+    <button (click)="getData()">Get Data</button>
+    <table>
+        <tbody>
+            <tr *ngFor="let res of result">
+                <td style="padding: 10px;">{{res.id}}</td>
+                <td style="padding: 10px;">{{res.make}}</td>
+                <td style="padding: 10px;">{{res.model}}</td>
+                <td style="padding: 10px;">{{res.year}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--Insertig Data-->
+<div>
+    <h2>Insert data</h2>
+    <input  type="text" [(ngModel)]= "make" placeholder="Enter Car Make">
+    <input type="text" [(ngModel)]= "model" placeholder="Enter Car Model">
+    <input type="number" [(ngModel)]= "year" placeholder="Enter Car Year">
+    <button (click)="insertData()">Insert Data</button>
+</div>
+
+<!--Deleting Data-->
+<div>
+    <h2>Delete Data</h2>
+    <input type="number" [(ngModel)]= "id" placeholder="Enter Car Id">
+    <button (click)="deleteData()">Delete</button>
+</div>
+
+<!--Update Data-->
+<div>
+    <h2>Update Data</h2>
+    <input type="number" [(ngModel)]= "id" placeholder="Enter Car Id">
+    <input  type="text" [(ngModel)]= "make" placeholder="Enter Car Make">
+    <input type="text" [(ngModel)]= "model" placeholder="Enter Car Model">
+    <input type="number" [(ngModel)]= "year" placeholder="Enter Car Year">
+    <button (click)="updateData()">Update Data</button>
+</div>
